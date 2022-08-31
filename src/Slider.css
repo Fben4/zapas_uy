@@ -1,0 +1,31 @@
+
+
+.carousel{
+    display: block; max-width: 100%; height: auto;
+
+}
+
+.carousel-inner{
+    height:  auto;
+    max-width: 100%;
+
+}
+
+.carousel-item {
+    width: 100%;
+    height: 500px; /* example */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+@media only screen and (max-width: 768px){
+    
+    
+
+
+}
