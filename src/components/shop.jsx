@@ -1,42 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from './card';
-import Cardcolor from './cardcolor';
-import Cardvans from './cardvans';
-import Cardadidas from './cardadidas';
+import Item from './item';
 import Navbar from "./navbar";
 
 const Shop = () =>{
     return(
-        <div>
-            <div><Navbar/></div>
-            <div container>
+        
+        <div className="container-fluid">
+            
+            <div>
                 <div className="row">
                     <div className="col">
-                        <Card/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardcolor/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardvans/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardadidas/>
+                        <Item/>
                     </div>
             </div>
             <div className="row">
                     <div className="col">
-                        <Card/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardcolor/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardvans/>
+                        <Item/>
                     </div>
                     <div className="col">
-                        <Cardadidas/>
+                        <Item/>
+                    </div>
+            </div>
+            <div className="row">
+                    <div className="col">
+                        <Item/>
+                    </div>
+                    <div className="col">
+                        <Item/>
+                    </div>
+                    <div className="col">
+                        <Item/>
+                    </div>
+                    <div className="col">
+                        <Item/>
                     </div>
             </div>
 

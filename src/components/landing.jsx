@@ -15,7 +15,6 @@ const Landing = () => {
     return (
         
         <div>
-            <nav><Navbar/></nav>
             
             <div>
                 <Slider />

@@ -5,6 +5,7 @@ import './brands.css';
 import './card.css';
 import './air.css';
 import './shop.css';
+import './item.css'
 
 import Navbar from './components/navbar';
 import Shop from './components/shop';
@@ -15,6 +16,7 @@ function App() {
   return (
     
       <Router>
+        <div><Navbar/></div>
       <div className='App'>
           <Routes>
             <Route path="/" exact element={<Landing/>}/>

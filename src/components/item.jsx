@@ -3,8 +3,9 @@ import React from 'react';
 
 const Item = () =>{
     return (
+      
         <div className="container sneakers">
-    <div className="card">
+    <div className="item">
         <div className="imgBx">
             <img src={require('../images/270.png')} />
         </div>
