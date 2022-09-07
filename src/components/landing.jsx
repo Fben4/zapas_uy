@@ -6,6 +6,7 @@ import Cardvans from './cardvans';
 import Cardadidas from './cardadidas';
 import Air from './air';
 import Navbar from './navbar';
+import ItemCount from './itemCount';
 import { Link } from 'react-router-dom';
 
 
@@ -26,16 +27,30 @@ const Landing = () => {
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-sm-12 col-lg-3 col-md-6 '>
-                            <Cardvans />
+                            <Cardvans
+                            name='Vans SK9 Hi'
+                            thumbnail={require('../images/vanspro.png')}>
+                            </Cardvans>
                         </div>
                         <div className=' col-sm-12 col-lg-3 col-md-6'>
-                            <Card />
+                            <Card
+                            name='Air Max 270'
+                            thumbnail={require('../images/270.png')}
+
+                            >
+                            </Card>
                         </div>
                         <div className='col-sm-12 col-lg-3 col-md-6'>
-                            <Cardcolor />
+                            <Cardcolor
+                            name='Air Max 97'
+                            thumbnail={require('../images/airmax.png')}>
+                            </Cardcolor>
                         </div>
                         <div className='col-sm-12 col-lg-3 col-md-6'>
-                            <Cardadidas />
+                            <Cardadidas
+                            name='Adidas x Bad Bunny'
+                            thumbnail={require('../images/badbunny.png')}>
+                            </Cardadidas>
                         </div>
 
                     </div>
@@ -46,6 +61,7 @@ const Landing = () => {
             <div className='container'>
                 <Air />
             </div>
+            <div> <ItemCount initiate={1} stock={5}/></div>
         </div>
 
     )

@@ -158,7 +158,7 @@ body {
 .item1{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/nike.png);
+    background-image: url(../images/nike.png);
     background-repeat: no-repeat;
 
 }
@@ -166,7 +166,7 @@ body {
 .item2{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/puma.png);
+    background-image: url(../images/puma.png);
     background-repeat: no-repeat;
 
 }
@@ -174,7 +174,7 @@ body {
 .item3{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/vans.png);
+    background-image: url(../images/vans.png);
     background-repeat: no-repeat;
 
 }
@@ -182,7 +182,7 @@ body {
 .item4{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/adidas.png);
+    background-image: url(../images/adidas.png);
     background-repeat: no-repeat;
 
 }
@@ -190,7 +190,7 @@ body {
 .item5{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/jordan.png);
+    background-image: url(../images/jordan.png);
     background-repeat: no-repeat;
 
 }
@@ -198,14 +198,14 @@ body {
 .item6{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/converse.png);
+    background-image: url(../images/converse.png);
     background-repeat: no-repeat;
 }
 
 .item7{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/under-armour.png);
+    background-image: url(../images/under-armour.png);
     background-repeat: no-repeat;
 }
 
@@ -213,7 +213,7 @@ body {
 .item8{
     background-position: 50%;
     background-size: contain;
-    background-image: url(./images/new-balance.png);
+    background-image: url(../images/new-balance.png);
     background-repeat: no-repeat;
 }
 

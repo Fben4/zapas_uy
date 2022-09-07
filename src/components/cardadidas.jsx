@@ -2,15 +2,15 @@ import React from 'react';
 
 
 
-const Cardadidas = () =>{
+const Cardadidas = (props) =>{
     return (
         <div className="container">
     <div className="card card_adidas">
         <div className="imgBx">
-            <img src={require('../images/badbunny.png')} />
+            <img src={props.thumbnail} />
         </div>
         <div className="contentBx">
-            <h2>Bad Bunny x Adidas</h2>
+            <h2>{props.name}</h2>
 
             <a href="#">Buy Now</a>
         </div>

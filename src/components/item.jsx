@@ -1,18 +1,22 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
-const Item = () =>{
+const Item = ({thumbnail, name, cost}) =>{
     return (
-      
+
         <div className="container sneakers">
     <div className="item">
         <div className="imgBx">
-            <img src={require('../images/270.png')} />
+            <img src={thumbnail}/>
         </div>
         <div className="contentBx">
-            <h2>Air Max 270</h2>
-
-            <a href="# ">Buy Now</a>
+            <h2>{name}</h2>
+            <div className='costo'>
+                <h3>${cost}</h3>
+            </div>
+            <a>Comprar</a>
+            
         </div>
     </div>
 </div>

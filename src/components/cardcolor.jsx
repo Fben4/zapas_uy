@@ -2,17 +2,17 @@ import React from 'react';
 
 
 
-const Cardcolor = () =>{
+const Cardcolor = (props) =>{
     return (
         <div className="container">
     <div className="card card_orange">
         <div className="imgBx">
-            <img src={require('../images/airmax.png')} />
+            <img src={props.thumbnail} />
         </div>
         <div className="contentBx">
-            <h2>Air Max 97</h2>
+            <h2>{props.name}</h2>
 
-            <a href="#">Buy Now</a>
+            <a href="#">Comprar</a>
         </div>
     </div>
 </div>
