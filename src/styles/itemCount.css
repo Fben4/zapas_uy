@@ -1,3 +1,9 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 icon-shape {
     display: inline-flex;
     align-items: center;
@@ -12,15 +18,57 @@ icon-shape {
     
 }
 
-.box{
-    height: 50px;
-    width: 200px;
+
+.title{
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.title p {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.box{
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja{
+    height: auto;
+    width: 300px;
+    border: 2px solid rgb(215, 32, 32);
 }
 .addcart{
     height: 40px;
     width: 150px;
     border-radius: 20px;
+}
+
+.inputs{
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.quantity{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity p{
+    margin: 0;
 }

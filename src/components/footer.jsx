@@ -44,7 +44,7 @@ const footer = () => {
                     <div className="col-xl-4 col-lg-4 mb-50">
                         <div className="footer-widget">
                             <div className="footer-logo">
-                                <a href="index.html"><img src={require('../images/zapasiso.png')} class="img-fluid" alt="logo"/></a>
+                                <a href="index.html"><img src={require('../images/zapasiso.png')} className="img-fluid" alt="logo"/></a>
                             </div>
                             <div className="footer-text">
                                 <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing

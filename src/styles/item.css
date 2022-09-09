@@ -151,7 +151,7 @@ body {
 }
 
 
-.container .item .contentBx a {
+.container .item .contentBx .buy {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -166,7 +166,7 @@ body {
     margin-top: 0;
 }
 
-.container .item:hover .contentBx a {
+.container .item:hover .contentBx .buy {
     opacity: 1;
     transform: translateY(20px);
     transition-delay: 0.75s;

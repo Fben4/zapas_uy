@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/itemCount.css';
 import { useState } from "react";
+import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const ItemCount = ({ initiate, stock } ) =>{
+const ItemCount = ({ initiate, stock, onAdd } ) =>{
 
     
     const [quantity, setQuantity] = useState(initiate); //hook
@@ -13,7 +14,6 @@ const ItemCount = ({ initiate, stock } ) =>{
     const decrease = () => {
         if (quantity > 1) {
             setQuantity(quantity-1);
-            console.log(quantity);
         }
         
     }
@@ -21,35 +21,34 @@ const ItemCount = ({ initiate, stock } ) =>{
     const increase = () => {
         if (quantity < stock) {
             setQuantity(quantity+1);
-        console.log(quantity);
         }
         
     }
 
     return (
-        <div className="container d-flex justify-content-center">
-                    <div className="tittle">
-                        <p className="text-dark">Air max 270</p>
+        <div className="container d-flex justify-content-center align-items-center">
+            <div className="caja">
+            <div className="title">
+                        <p>Air max 270</p>
                     </div>
-                    <div className="input-group w-auto justify-content-end align-items-center">
+                    <div className="inputs">
                         <input onClick={decrease} 
                         type="button" 
                         value="-" 
                         className="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity" />
-                        <input 
-                        type="number" 
-                        value={quantity}
-                        name="quantity" 
-                        className="quantity-field border-0 text-center w-25" />
+                        <div className="quantity "><p>{quantity}</p></div>
                         <input onClick={increase} 
                         type="button" 
                         value="+" 
-                        className="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" />
-                        <div className="box">
-                            <button className="addcart">Añadir al carrito</button>
-                        </div>
-                        
+                        className="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" />                     
                     </div>
+                    <div className="box">
+                        {
+                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="btn btn-dark">Agregar al carrito</button> : <button className="btn btn-dark">Sin stock</button>
+                        }
+                        </div>
+            </div>
+                    
                 </div>
     )
 }
