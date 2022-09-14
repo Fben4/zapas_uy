@@ -1,4 +1,6 @@
-const zapasfromBD = [
+
+
+const data = [
     {
         id: 1,
         name:'Air Max 270',
@@ -16,7 +18,14 @@ const zapasfromBD = [
     {
         id: 3,
         name:'Converse Weapon Hombre',
-        thumbnail:require('../images/weapon.png') ,
+        thumbnail:require('../images/red.png') ,
+        thumbnail_1:require('../images/weaponblack.png'),
+        thumbnail_2:require('../images/weaponvintage.png'),
+        promo1:require('../images/wppromo1.jpg'),
+        promo2:require('../images/wppromo2.jpg'),
+        promo3:require('../images/wppromo3.jpg'),
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem est omnis ipsum veritatis placeat suscipit rerum! Labore, facere debitis? Commodi, sint. Officiis atque, libero sequi ducimus consequatur esse quae enim.',
+        logo:require('../images/converse.png'),
         cost:9000 ,
         stock:6
     },
@@ -43,4 +52,4 @@ const zapasfromBD = [
     }
 ]
 
-export default zapasfromBD;
+export default data;

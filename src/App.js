@@ -12,11 +12,12 @@ import './styles/landing.css'
 
 
 import Navbar from './components/navbar';
-import Shop from './components/itemList';
+import ItemList from './components/itemList';
 import Landing from './components/landing';
 import Footer from './components/footer';
 import ItemCount from './components/itemCount';
 import ItemListContainer from './components/itemListContainer';
+import ItemDetailContainer from './components/itemDetailContainer';
 
 
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
@@ -29,8 +30,8 @@ function App() {
       <div className='App'>
           <Routes>
             <Route path="/" exact element={<Landing/>}/>
-            <Route path='/shop' style element={<Shop/>}/>
-            <Route path='/shop'  element={<Shop/>}/>
+            <Route path='/itemList' style element={<ItemList/>}/>
+            <Route path='/itemDetailContainer'  element={<ItemDetailContainer/>}/>
           </Routes>
           <Footer/>
       </div>

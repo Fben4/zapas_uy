@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row{
+    padding: 0;
+}
+
+.detail{
+    margin-top: 20px;
+    padding: 0;
+}
+
+.title h1{
+    font-weight: 700;
+}
+.zapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 450px;
+}
+
+.zapa img{
+    padding: 0;
+    transition: 0.3s;
+    scale: 0.8;
+
+}
+.zapa img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+
+}
+
+.costo{
+    margin: 10px 0 10px 0;
+}
+
+.stock{
+    margin: 10px 0 20px 0;
+}
+
+.costo h3{
+    font-family: "Russo One" ;
+    font-size: 50px;
+
+    
+}
+
+.gallery{
+    height: auto;
+    margin: 20px 0 20px 0;
+    padding: 0;
+    background-color: black;
+    padding: 20px;
+}
+
+.description{
+    height: 50%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+.log{
+    height: 50%;
+    width: 100%;
+ 
+}
+
+.text{
+    height: 50%;
+}

@@ -6,7 +6,7 @@ import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const ItemCount = ({ initiate, stock, onAdd } ) =>{
+const ItemCount = ({ initiate, stock, onAdd, cost } ) =>{
 
     
     const [quantity, setQuantity] = useState(initiate); //hook
@@ -28,9 +28,6 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
     return (
         <div className="container d-flex justify-content-center align-items-center">
             <div className="caja">
-            <div className="title">
-                        <p>Air max 270</p>
-                    </div>
                     <div className="inputs">
                         <input onClick={decrease} 
                         type="button" 
@@ -44,7 +41,7 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
                     </div>
                     <div className="box">
                         {
-                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="btn btn-dark">Agregar al carrito</button> : <button className="btn btn-dark">Sin stock</button>
+                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="btn btn-light">Agregar al carrito</button> : <button className="btn btn-dark">Sin stock</button>
                         }
                         </div>
             </div>

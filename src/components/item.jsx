@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import ItemDetailContainer from './itemDetailContainer';
 
 
 
@@ -33,7 +34,8 @@ const Item = ({thumbnail, name, cost,stock}) =>{
                 <h3>${cost}</h3>
                 <h3>{liveStock} unidades</h3>
             </div>
-            { liveStock > 0 ? <button className='buy' onClick={minus} >Comprar</button> : <button className='buy'>Sin stock</button> }
+            {/* { liveStock > 0 ? <button className='buy' onClick={minus} >Comprar</button> : <button className='buy'>Sin stock</button> } */}
+            <Link to='/itemDetailContainer' className='buy'>Comprar</Link>
             
             
         </div>

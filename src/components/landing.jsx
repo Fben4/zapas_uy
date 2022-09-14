@@ -9,6 +9,7 @@ import Navbar from './navbar';
 import ItemCount from './itemCount';
 import ItemListContainer from './itemListContainer';
 import { Link } from 'react-router-dom';
+import ItemDetailContainer from './itemDetailContainer';
 
 
 
@@ -63,7 +64,6 @@ const Landing = () => {
             <div className='container'>
                 <Air />
             </div>
-            <ItemListContainer/>
         </div>
 
     )
