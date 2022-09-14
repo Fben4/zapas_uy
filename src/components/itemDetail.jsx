@@ -18,13 +18,13 @@ const ItemDetail = ({zapa}) => {
             </div>
             <div className='row'>
                 <div className='zapa col-sm-12 col-md-4 col-lg-4'>
-                    <img src={zapa.thumbnail_1} className='img-fluid' />
+                    <img src={zapa.thumbnail_1} alt='thumbnail' className='img-fluid' />
                 </div>
                 <div className='zapa col-sm-12 col-md-4 col-lg-4'>
-                    <img src={zapa.thumbnail} className='img-fluid' />
+                    <img src={zapa.thumbnail} alt='thumbnail' className='img-fluid' />
                 </div>
                 <div className='  zapa col-sm-12 col-md-4 col-lg-4'>
-                    <img src={zapa.thumbnail_2} className='img-fluid' />
+                    <img src={zapa.thumbnail_2}alt='thumbnail' className='img-fluid' />
                 </div>
 
                 
@@ -46,21 +46,21 @@ const ItemDetail = ({zapa}) => {
 
                     </div>
                 </div>
-                <div className="row bg-black ">
+                <div className="row add ">
                     <div className="col-lg-12 d-flex justify-content-center">
                     <ItemCount initiate={1} stock={zapa.stock}  />
                     </div>
                 </div>
                 <div className="row gallery">
-                    <div className="d-flex col-lg-6 justify-content-center align-items-center ">
+                    <div className="d-flex col-lg-6 col-md-6 col-sm-12 justify-content-center align-items-center ">
                         <Gallery zapa={zapa} />
                     </div>
-                    <div className="d-flex col-lg-6 align-items-center ">
+                    <div className="d-flex col-lg-6 col-md-6 col-sm-12 align-items-center ">
                         <div className="description row text-white">
-                            <div className="log col-lg-12">
-                                <img src={zapa.logo} alt="" className="img-fluid"  />
+                            <div className=" col-lg-12 col-md-12 col-sm-12">
+                                <img src={zapa.logo} alt="logo" className="log"   />
                             </div>
-                            <div className="text col-lg-12">
+                            <div className="text col-lg-12 col-md-12 col-sm-12">
                                 <h1>{zapa.name}</h1>
                                 <p>{zapa.description} </p>
                             </div>

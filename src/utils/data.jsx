@@ -5,6 +5,13 @@ const data = [
         id: 1,
         name:'Air Max 270',
         thumbnail:require('../images/270.png') ,
+        thumbnail_1:require('../images/black270.jpg') ,
+        thumbnail_2:require('../images/white270.jpg') ,
+        promo1:require('../images/promo270_1.png'), //vertical
+        promo2:require('../images/270promo3.png'), //horizontal
+        promo3:require('../images/promo270.jpg'),
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem est omnis ipsum veritatis placeat suscipit rerum! Labore, facere debitis? Commodi, sint. Officiis atque, libero sequi ducimus consequatur esse quae enim.',
+        logo:require('../images/nike.png'),
         cost:5500 ,
         stock:4
     },

@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
     //componentDidMount
     useEffect(() => { // funciones a ejecutar cuando se monta el componente, consulto base de datos en este caso 
-        customFetch(2000, data[2])
+        customFetch(2000, data[2]) //funciona con 0 y 2 por ahora
             .then(result => setZapa(result))
             .catch(error => console.log(error))}
             , []);

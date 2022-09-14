@@ -41,7 +41,7 @@ const ItemCount = ({ initiate, stock, onAdd, cost } ) =>{
                     </div>
                     <div className="box">
                         {
-                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="btn btn-light">Agregar al carrito</button> : <button className="btn btn-dark">Sin stock</button>
+                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="button">Agregar al carrito</button> : <button className="button">Sin stock</button>
                         }
                         </div>
             </div>

@@ -59,22 +59,23 @@
     padding: 0;
     background-color: black;
     padding: 20px;
+
 }
 
 .description{
-    height: 50%;
+
     width: auto;
     display: flex;
     align-items: center;
+    margin: 0;
+
     
 }
 
-.log{
-    height: 50%;
-    width: 100%;
- 
+.add{
+    padding: 0;
 }
-
-.text{
-    height: 50%;
+.log{
+    min-height: 40%;
+    min-width: 40%;
 }
