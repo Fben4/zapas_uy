@@ -6,7 +6,7 @@ import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const ItemCount = ({ initiate, stock, onAdd, cost } ) =>{
+const ItemCount = ({ initiate, stock, onAdd } ) =>{
 
     
     const [quantity, setQuantity] = useState(initiate); //hook
@@ -33,7 +33,7 @@ const ItemCount = ({ initiate, stock, onAdd, cost } ) =>{
                         type="button" 
                         value="-" 
                         className="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity" />
-                        <div className="quantity "><p>{quantity}</p></div>
+                        <div className="quantity"><p>{quantity}</p></div>
                         <input onClick={increase} 
                         type="button" 
                         value="+" 

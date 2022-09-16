@@ -5,6 +5,11 @@ import Gallery from "./gallery";
 import '../styles/detail.css'
 
 const ItemDetail = ({zapa}) => {
+
+    const onAdd = (quantity) => {
+        alert('seleccionaste ' + quantity + ' productos');
+    }
+
     return(
 
         <div className='detail container-fluid'>
@@ -19,6 +24,7 @@ const ItemDetail = ({zapa}) => {
             <div className='row'>
                 <div className='zapa col-sm-12 col-md-4 col-lg-4'>
                     <img src={zapa.thumbnail_1} alt='thumbnail' className='img-fluid' />
+                    
                 </div>
                 <div className='zapa col-sm-12 col-md-4 col-lg-4'>
                     <img src={zapa.thumbnail} alt='thumbnail' className='img-fluid' />
@@ -48,7 +54,7 @@ const ItemDetail = ({zapa}) => {
                 </div>
                 <div className="row add ">
                     <div className="col-lg-12 d-flex justify-content-center">
-                    <ItemCount initiate={1} stock={zapa.stock}  />
+                    <ItemCount initiate={1} stock={zapa.stock} onAdd={onAdd}  /> 
                     </div>
                 </div>
                 <div className="row gallery">

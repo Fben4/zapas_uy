@@ -12,11 +12,10 @@ import './styles/landing.css'
 
 
 import Navbar from './components/navbar';
-import ItemList from './components/itemList';
+import ItemListContainer from './components/itemListContainer';
 import Landing from './components/landing';
 import Footer from './components/footer';
 import ItemCount from './components/itemCount';
-import ItemListContainer from './components/itemListContainer';
 import ItemDetailContainer from './components/itemDetailContainer';
 
 
@@ -30,8 +29,9 @@ function App() {
       <div className='App'>
           <Routes>
             <Route path="/" exact element={<Landing/>}/>
-            <Route path='/itemList' style element={<ItemList/>}/>
-            <Route path='/itemDetailContainer'  element={<ItemDetailContainer/>}/>
+            <Route path='/itemListContainer' style element={<ItemListContainer/>}/>
+            <Route path='/category/:idCategory' style element={<ItemListContainer/>}/>
+            <Route path='/item/:idItem' style element={<ItemDetailContainer/>}/>
           </Routes>
           <Footer/>
       </div>

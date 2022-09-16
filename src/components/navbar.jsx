@@ -28,13 +28,13 @@ const Navbar = () => {
                     <ul className='navbar-nav'>
                             
                             <li className='nav-item'>
-                                <Link className='nav-link' to='itemList' >ItemList</Link>
+                                <Link className='nav-link' to='/itemListContainer' >Tienda</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link className='nav-link' to='/buy' >buy</Link>
+                                <Link className='nav-link' to='/category/1' >Hombres</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link className='nav-link'  to='/itemDetailContainer' >ItemDetailContainer</Link>
+                                <Link className='nav-link' to='/category/2' >Mujeres</Link>
                             </li>
                             <li className='nav-item'>
                                 <a className='nav-link'><Cart></Cart></a>
