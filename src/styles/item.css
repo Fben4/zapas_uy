@@ -24,7 +24,7 @@ body {
 
 .container .item {
     position: relative;
-    width: 400px;
+    width: 350px;
     height: 500px;
     background: #232323;
     border-radius: 20px;
@@ -64,13 +64,13 @@ body {
 
 .container .item:hover .imgBx {
     top: 0%;
-    transform: translateY(0%);
+    transform: translateY(40%);
 
 }
 
 .container .item .imgBx img {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-25deg);
     width: 230px;
@@ -88,7 +88,7 @@ body {
 }
 
 .container .item:hover .contentBx {
-    height: 150px;
+    height: 170px;
 }
 
 .container .item .contentBx h2 {
@@ -97,7 +97,7 @@ body {
     letter-spacing: 1px;
     color: #fff;
     margin: 0;
-    font-size: 20px;
+    font-size:25px;
 }
 
 .container .item .contentBx .costo,
@@ -151,7 +151,7 @@ body {
 }
 
 
-.container .item .contentBx .buy {
+.buy {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -168,7 +168,7 @@ body {
 
 .container .item:hover .contentBx .buy {
     opacity: 1;
-    transform: translateY(20px);
+    transform: translateY(0px);
     transition-delay: 0.75s;
 
 }
@@ -227,4 +227,13 @@ body {
     letter-spacing: 2px;
     margin-right: 10px;
 }
+
+.container .item:hover .imgBx {
+    top: 0%;
+    transform: translateY(20%);
+
 }
+
+
+}
+

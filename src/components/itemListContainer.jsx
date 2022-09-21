@@ -46,7 +46,9 @@ const ItemListContainer = () => {
                     cost={item.cost}
                     stock={item.stock}
             />
+
             </div>
+                
             
 
             ))

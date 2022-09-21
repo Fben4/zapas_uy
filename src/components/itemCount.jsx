@@ -12,7 +12,7 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
     const [quantity, setQuantity] = useState(initiate); //hook
 
     const decrease = () => {
-        if (quantity > 1) {
+        if (quantity > 0) {
             setQuantity(quantity-1);
         }
         
@@ -24,6 +24,8 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
         }
         
     }
+
+
 
     return (
         <div className="container d-flex justify-content-center align-items-center">
@@ -41,7 +43,9 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
                     </div>
                     <div className="box">
                         {
-                            stock > 0 ? <button onClick={() => onAdd(quantity)} className="button">Agregar al carrito</button> : <button className="button">Sin stock</button>
+                            stock && quantity
+                            ? <button onClick={() => onAdd(quantity)} className="button">Agregar al carrito</button> 
+                            : <button  className="button bg-dark text-light">Agrega al menos 1</button>
                         }
                         </div>
             </div>

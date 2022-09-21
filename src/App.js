@@ -17,7 +17,7 @@ import Landing from './components/landing';
 import Footer from './components/footer';
 import ItemCount from './components/itemCount';
 import ItemDetailContainer from './components/itemDetailContainer';
-
+import Cart from './components/cart';
 
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 
@@ -32,6 +32,7 @@ function App() {
             <Route path='/itemListContainer' style element={<ItemListContainer/>}/>
             <Route path='/category/:idCategory' style element={<ItemListContainer/>}/>
             <Route path='/item/:idItem' style element={<ItemDetailContainer/>}/>
+            <Route path='/cart' style element={<Cart/>}/>
           </Routes>
           <Footer/>
       </div>

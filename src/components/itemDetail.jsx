@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import ItemCount from "./itemCount";
 import Gallery from "./gallery";
 import '../styles/detail.css'
+import Item from "./item";
+import { useState } from "react";
+
 
 const ItemDetail = ({zapa}) => {
+    const [itemCount, setItemCount] = useState(0); // hook para el contador, variable y funcion para modificarla
 
     const onAdd = (quantity) => {
         alert('seleccionaste ' + quantity + ' productos');
+        setItemCount(quantity); // actualizo el estado de la variable itemCount
+        
     }
 
     return(
@@ -53,8 +59,13 @@ const ItemDetail = ({zapa}) => {
                     </div>
                 </div>
                 <div className="row add ">
-                    <div className="col-lg-12 d-flex justify-content-center">
-                    <ItemCount initiate={1} stock={zapa.stock} onAdd={onAdd}  /> 
+                    <div className="col-lg-12 d-flex justify-content-center ">
+                        {
+                            itemCount === 0
+                            ? <ItemCount initiate={itemCount} stock={zapa.stock} onAdd={onAdd}  /> 
+                            : <div className="gotokart"><Link to='/cart'><button className="button ">Terminar mi compra</button></Link></div>
+                        }
+                    
                     </div>
                 </div>
                 <div className="row gallery">
