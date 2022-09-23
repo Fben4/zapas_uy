@@ -20,13 +20,14 @@ import ItemDetailContainer from './components/itemDetailContainer';
 import Cart from './components/cart';
 
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
+import CartContextProvider from './components/cartContext';
 
 function App() {
   return (
-    
+    <CartContextProvider>
       <Router>
         <div><Navbar/></div>
-      <div className='App'>
+      <div className='App'> 
           <Routes>
             <Route path="/" exact element={<Landing/>}/>
             <Route path='/itemListContainer' style element={<ItemListContainer/>}/>
@@ -37,7 +38,7 @@ function App() {
           <Footer/>
       </div>
       </Router>
-
+      </CartContextProvider>
       
   )
   

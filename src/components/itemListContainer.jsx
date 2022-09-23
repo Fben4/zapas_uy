@@ -37,9 +37,8 @@ const ItemListContainer = () => {
         {
         
         zapas.map(item => (
-            <div className="row">
+            <div key={item.id} className="row">
                 <Item className="col-lg-3 col-md-4 col-sm-12"
-                    key={item.id}
                     id={item.id}
                     name= {item.name}
                     thumbnail={item.thumbnail}
