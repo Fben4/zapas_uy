@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import '../styles/itemCount.css';
 import { useState } from "react";
 import { faAdd } from "@fortawesome/free-solid-svg-icons";
+import SizeSelector from "./size";
 
 
-
-const ItemCount = ({ initiate, stock, onAdd } ) =>{
+const ItemCount = ({ initiate, stock, onAdd ,sizechanger, sizesarray} ) =>{
 
     
     const [quantity, setQuantity] = useState(initiate); //hook
+
 
     const decrease = () => {
         if (quantity > 0) {
@@ -27,10 +28,12 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
 
 
 
+
     return (
         <div className="container d-flex justify-content-center align-items-center">
             <div className="caja">
-                    <div className="inputs">
+                <div className="d-flex justify-content-center">
+                <div className="inputs">
                         <input onClick={decrease} 
                         type="button" 
                         value="-" 
@@ -41,9 +44,13 @@ const ItemCount = ({ initiate, stock, onAdd } ) =>{
                         value="+" 
                         className="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" />                     
                     </div>
+                </div>
+                    
+                    <SizeSelector sizesarray={sizesarray} sizechanger={sizechanger}/>
+                
                     <div className="box">
                         {
-                            stock && quantity
+                            stock && quantity 
                             ? <button onClick={() => onAdd(quantity)} className="button">Agregar al carrito</button> 
                             : <button  className="button bg-dark text-light">Agrega al menos 1</button>
                         }

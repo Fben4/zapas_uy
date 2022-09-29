@@ -6,9 +6,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
     return(
+        
         <div className='position-relative'>
+            <Link to='./cart'>
             <FontAwesomeIcon icon={faCartShopping} className = 'cart'></FontAwesomeIcon>
-            <span className='badge bg-secondary  '>4</span>
+            <span className='badge bg-secondary  '>4</span></Link>
+            
         </div>
             
         

@@ -15,23 +15,25 @@ const data = [
         brandid:1,
         categoryid:1, // hombre
         sales: 0,
+        sizes : [40,41,42,43,44,45],
         cost:5500 ,
         stock:4
     },
     {
         id: 2,
-        name:'Air Max 90',
+        name:'Air Max 97',
         thumbnail:require('../images/airmax.png') ,
-        thumbnail_1:require('../images/weaponblack.png'),
-        thumbnail_2:require('../images/weaponvintage.png'),
-        promo1:require('../images/wppromo1.jpg'),
-        promo2:require('../images/wppromo2.jpg'),
-        promo3:require('../images/wppromo3.jpg'),
+        thumbnail_1:require('../images/97brown.png'),
+        thumbnail_2:require('../images/97white.png'),
+        promo1:require('../images/97vertical.jpeg'),
+        promo2:require('../images/97h1.png'),
+        promo3:require('../images/97h2.jpg'),
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem est omnis ipsum veritatis placeat suscipit rerum! Labore, facere debitis? Commodi, sint. Officiis atque, libero sequi ducimus consequatur esse quae enim.',
-        logo:require('../images/converse.png'),
+        logo:require('../images/nike.png'),
         brandid:1,
         categoryid:1, 
         sales: 0,
+        sizes: [36,37,38,39,40,41,42,43,44,45],
         cost:8000 ,
         stock:3
     },
@@ -50,6 +52,7 @@ const data = [
         categoryid:1, // hombre
         sales: 0,
         cost:9000 ,
+        sizes : [40,41,42,43,44,45],
         stock:6
     },
     {
@@ -67,6 +70,7 @@ const data = [
         categoryid:1, // hombre
         sales: 1,
         cost:8000 ,
+        sizes : [40,41,42,43,44,45],
         stock:8
     },
     {
@@ -84,6 +88,7 @@ const data = [
         categoryid:2, 
         sales: 0,
         cost:6000 ,
+        sizes : [40,41,42,43,44,45],
         stock:7
     },
     {
@@ -100,6 +105,7 @@ const data = [
         brandid:5,
         categoryid:2, 
         sales: 3,
+        sizes : [39,40,41,42,43,44,45],
         cost:7000 ,
         stock:4
     }

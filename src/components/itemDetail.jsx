@@ -4,22 +4,37 @@ import ItemCount from "./itemCount";
 import Gallery from "./gallery";
 import '../styles/detail.css'
 import Item from "./item";
+import SizeSelector from "./size";
+
 import { useState,  useContext } from "react";
 import { CartContext } from "./cartContext";
+
 
 const ItemDetail = ({zapa}) => {
 
 
-
-    const [itemCount, setItemCount] = useState(0); // hook para el contador, variable y funcion para modificarla
+    const [itemCount, setItemCount] = useState(0);
+    const [itemSize, setItemSize] = useState(0);
     const ctx = useContext(CartContext) //hook que me permite usar el contexto, funcion global para modificar el estado global
+
+
+    const sizechanger = (size) => {
+        setItemSize(size);
+        console.log(size);
+
+    }
+    
+
 
     const onAdd = (quantity) => {
         setItemCount(quantity);
          // actualizo el estado de la variable itemCount
-        ctx.addItem(zapa, quantity); // agrego el producto al carrito
+        ctx.addItem(zapa, quantity ); // agrego el producto al carrito
+
+
     }
     
+
 
 
     return(
@@ -68,7 +83,10 @@ const ItemDetail = ({zapa}) => {
                     <div className="col-lg-12 d-flex justify-content-center ">
                         {
                             itemCount === 0 // si itemCount es 0, muestro el contador, si no, muestro el boton de finalizar compra
-                            ? <ItemCount initiate={itemCount} stock={zapa.stock} onAdd={onAdd}  /> 
+                            ? <div>
+                                <ItemCount initiate={itemCount} stock={zapa.stock} onAdd={onAdd} sizechanger={sizechanger} sizesarray={zapa.sizes}  /> 
+                                
+                            </div>
                             : <div className="gotokart"><Link to='/cart'><button className="button ">Terminar mi compra</button></Link></div>
                         }
                     

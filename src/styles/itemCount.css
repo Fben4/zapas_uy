@@ -44,7 +44,8 @@ icon-shape {
 
 .caja {
     height: auto;
-    width: 300px;
+    width: auto;
+    
 }
 
 .addcart {
@@ -55,7 +56,7 @@ icon-shape {
 
 .inputs {
     height: 60px;
-    width: auto;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -21,18 +21,21 @@ body {
 
 }
 
+.sneakers{
+    display: flex;
+    justify-content: center;
+}
 
 .container .item {
     position: relative;
     width: 350px;
-    height: 500px;
+    height: 450px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
     margin: auto;
     padding: 0;
-    
-    
+
 }
 
 
@@ -55,7 +58,7 @@ body {
 .container .item .imgBx {
     position: absolute;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-45%);
     z-index: 10000;
     width: 100%;
     height: 250px;
@@ -64,7 +67,7 @@ body {
 
 .container .item:hover .imgBx {
     top: 0%;
-    transform: translateY(40%);
+    transform: translateY(10%);
 
 }
 
@@ -85,6 +88,7 @@ body {
     transition: 1s;
     z-index: 10;
     margin-top: 10px;
+
 }
 
 .container .item:hover .contentBx {
@@ -97,8 +101,10 @@ body {
     letter-spacing: 1px;
     color: #fff;
     margin: 0;
-    font-size:25px;
+    font-size:22px;
+    visibility: visible;
 }
+
 
 .container .item .contentBx .costo,
 .container .item .contentBx .color {

@@ -6,26 +6,42 @@ export const CartContext = createContext(); //createContext me permite crear un 
 const CartContextProvider = ({children}) =>{
     const [cartList, setCartList] = useState([]) //estado global del carrito
 
-    const addItem = (product, quantity, stock) =>{
-        isInCart(product.id) ? increase(product.id, quantity, product.stock) : setCartList([...cartList, {...product, quantity}]) //si el producto esta en el carrito, aumento la cantidad, sino lo agrego al carrito
+    const selectedsize = (product, size) =>{
+        setCartList([...cartList, {...product, size}])
     }
+
+    const addItem = (product, quantity  ) =>{
+        isInCart(product.id) ? increase(product.id, quantity, product.stock) : setCartList([...cartList, {...product, quantity, selectedsize}]) //si el producto esta en el carrito, aumento la cantidad, sino lo agrego al carrito
+        
+    }
+
+
 
     const isInCart = (id) => cartList.some(item => item.id === id) //funcion que me dice si el producto esta en el carrito
 
     const increase = (id, quantity, stock) =>{
+        if (cartList.some(item => item.id === id && item.quantity >= stock)) { //si la cantidad del producto es mayor o igual al stock, no lo dejo agregar mas
+            alert('No hay mas stock')
+
+        }
+        else if (cartList.some(item => item.id === id &&  quantity <= stock)){
             setCartList(cartList.map(item => item.id === id ? {...item, quantity: item.quantity + quantity} : item))//recorro el carrito y si el id del producto coincide con el id del producto que quiero aumentar, aumento la cantidad  
-            if (cartList.some(item => item.id === id && item.quantity >= stock)) { //si la cantidad del producto es mayor o igual al stock, no lo dejo agregar mas
-                alert('No hay mas stock')
+        } 
+    }
 
-            }
-    
+    const cartQuantity = () => {
+        let quantities = cartList.map(item => item.quantity) //recorro el carrito y guardo las cantidades en un array
+        let total = quantities.reduce((previousValue, CurrentValue) => previousValue + CurrentValue, 0) //sumo las cantidades
+        return total
     }
 
 
-    
-    const howMany = (id) =>{
-        return cartList.find(item => item.id === id).quantity //busco el producto en el carrito y devuelvo la cantidad
+    const cartTotal = () => {
+        return cartList.map(item => item.cost * item.quantity).reduce((previousValue, CurrentValue) => previousValue + CurrentValue, 0) //recorro el carrito y multiplico el costo por la cantidad, luego sumo los resultados
     }
+                    
+    
+
 
     const clear = () =>{
         setCartList([])//limpio el carrito
@@ -40,7 +56,7 @@ const CartContextProvider = ({children}) =>{
 
 
     return(
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, cartQuantity, cartTotal, selectedsize}}>
             {children}
         </CartContext.Provider>
     )
