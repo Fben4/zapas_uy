@@ -6,16 +6,11 @@ export const CartContext = createContext(); //createContext me permite crear un 
 const CartContextProvider = ({children}) =>{
     const [cartList, setCartList] = useState([]) //estado global del carrito
 
-    const selectedsize = (product, size) =>{
-        setCartList([...cartList, {...product, size}])
+
+    const addItem = (product, quantity, size) =>{
+        isInCart (product.id) ? increase(product.id, quantity) : setCartList([...cartList, {...product, quantity, size}])
+    
     }
-
-    const addItem = (product, quantity  ) =>{
-        isInCart(product.id) ? increase(product.id, quantity, product.stock) : setCartList([...cartList, {...product, quantity, selectedsize}]) //si el producto esta en el carrito, aumento la cantidad, sino lo agrego al carrito
-        
-    }
-
-
 
     const isInCart = (id) => cartList.some(item => item.id === id) //funcion que me dice si el producto esta en el carrito
 
@@ -39,8 +34,7 @@ const CartContextProvider = ({children}) =>{
     const cartTotal = () => {
         return cartList.map(item => item.cost * item.quantity).reduce((previousValue, CurrentValue) => previousValue + CurrentValue, 0) //recorro el carrito y multiplico el costo por la cantidad, luego sumo los resultados
     }
-                    
-    
+
 
 
     const clear = () =>{
@@ -56,7 +50,7 @@ const CartContextProvider = ({children}) =>{
 
 
     return(
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem, cartQuantity, cartTotal, selectedsize}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, cartQuantity, cartTotal}}>
             {children}
         </CartContext.Provider>
     )

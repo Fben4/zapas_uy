@@ -1,14 +1,25 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .line{
     
     background-color: white;
-    height: auto;
+    width: 90%;
+    min-height: 150px;
     border-radius: 26px;
-    margin: 20px;
+    margin: 30px;
     padding: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 }
 
+.caja{
+    margin: 30px;
+    padding: 10px;
+}
 
 .detail{
     width: 100%;
@@ -32,5 +43,19 @@
 
 .subtotal p{
     color: rgb(47, 118, 47);
+}
+
+
+.sum{
+    padding: 0;
+    margin: auto;
+
+}
+.summary{
+    background-color: white;
+    min-height: 300px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 26px;
+
 }
 

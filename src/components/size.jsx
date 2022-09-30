@@ -5,14 +5,13 @@ import { useState } from "react";
 
 
 
-const SizeSelector = (sizesarray, sizechanger) =>{
+const SizeSelector = (sizesarray ) =>{
 
     const [size, setSize] = useState(0);
 
     const select = (e) => {
         setSize(e.target.value);
-        console.log(e.target.value);
-            
+
     }
 
     

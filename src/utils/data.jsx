@@ -17,6 +17,7 @@ const data = [
         sales: 0,
         sizes : [40,41,42,43,44,45],
         cost:5500 ,
+        size:0,
         stock:4
     },
     {
@@ -35,6 +36,7 @@ const data = [
         sales: 0,
         sizes: [36,37,38,39,40,41,42,43,44,45],
         cost:8000 ,
+        size:0,
         stock:3
     },
     {
@@ -53,6 +55,7 @@ const data = [
         sales: 0,
         cost:9000 ,
         sizes : [40,41,42,43,44,45],
+        size:0,
         stock:6
     },
     {
@@ -71,6 +74,7 @@ const data = [
         sales: 1,
         cost:8000 ,
         sizes : [40,41,42,43,44,45],
+        size:0,
         stock:8
     },
     {
@@ -89,6 +93,7 @@ const data = [
         sales: 0,
         cost:6000 ,
         sizes : [40,41,42,43,44,45],
+        size:0,
         stock:7
     },
     {
@@ -107,6 +112,7 @@ const data = [
         sales: 3,
         sizes : [39,40,41,42,43,44,45],
         cost:7000 ,
+        size:0,
         stock:4
     }
 ]

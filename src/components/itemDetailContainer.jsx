@@ -11,17 +11,24 @@ const ItemDetailContainer = () => {
 
     const [zapa, setZapa] = useState({});
     const {idItem} = useParams();
+    const [loading, setLoading] = useState(true);
 
     //componentDidMount
     useEffect(() => { // funciones a ejecutar cuando se monta el componente, consulto base de datos en este caso 
         if (idItem){
             customFetch(2000, data.find(item => item.id == idItem)) 
             .then(result => setZapa(result))
-            .catch(error => console.log(error))}
+            .then(() => setLoading(false))
+            .catch(error => console.log(error))
+            }
+            
         } , [idItem]);
 
     return (
-        <ItemDetail zapa={zapa} /> // usar nombre de propiedades iguales a los nombres de los atributos de la base de datos
+        <div>
+            { loading ? <h1>Cargando...</h1> : <ItemDetail zapa={zapa} /> }
+        </div>
+            // usar nombre de propiedades iguales a los nombres de los atributos de la base de datos
 
 
 )};
