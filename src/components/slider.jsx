@@ -11,13 +11,13 @@ const Slider = () => {
             </div>
             <div className="carousel-inner slide">
                 <div className="carousel-item item1 active">
-                    <img src={require("../images/1.jpg")} className="d-block w-100 " alt="..." />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/zapas-uy.appspot.com/o/images%2F1.jpg?alt=media&token=1a217320-f89f-4dab-93d0-8577a3d1dda6" className="d-block w-100 " alt="..." />
                 </div>
                 <div className="carousel-item item2">
-                    <img src={require("../images/6.jpg")} className="d-block w-100 " alt="..." />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/zapas-uy.appspot.com/o/images%2F6.jpg?alt=media&token=d115ca3b-57dc-4ba2-9621-ba1c892f1018" className="d-block w-100 " alt="..." />
                 </div>
                 <div className="carousel-item item3">
-                    <img src={require("../images/8.jpg")} className="d-block w-100" alt="..." />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/zapas-uy.appspot.com/o/images%2Fold-skool-lite-vs-old-skool.jpg?alt=media&token=1e5f7746-13f3-492e-9a74-76c95d1352b4" className="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

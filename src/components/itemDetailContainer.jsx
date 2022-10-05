@@ -24,6 +24,7 @@ const ItemDetailContainer = () => {
             
         } , [idItem]);
 
+
     return (
         <div>
             { loading ? <h1>Cargando...</h1> : <ItemDetail zapa={zapa} /> }

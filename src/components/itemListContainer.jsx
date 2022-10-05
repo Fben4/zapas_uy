@@ -4,10 +4,9 @@ import Item from './item';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import customFetch from '../utils/customFetch';
-import data from "../utils/data";
 import {db} from '../utils/firebaseConfig';
-import { collection, getDocs } from "firebase/firestore";
-
+import { collection, getDocs, where, query, orderBy} from "firebase/firestore";
+import { firebaseFetch } from "../utils/firebaseFetch";
 
 
 
@@ -18,24 +17,26 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
     const [loading, setLoading] = useState(true);
 
-    //componentDidUpdate
-    useEffect(async () => { // funciones a ejecutar cuando se monta el componente, consulto base de datos en este caso
-        const querySnapshot = await getDocs(collection(db, "products"));
-        const dataFromFirestore = querySnapshot.docs.map(item => ({
-            id: item.id,
-            ...item.data()
-        }))
-        setZapas(dataFromFirestore);
-        
-    },[zapas]);
     
-    //componentDidunmount
 
-    useEffect(() => {
-        return () => {
-            console.log('desmontado');
+    //componentDidUpdate
+    useEffect( () => {
+        if (idCategory){
+            firebaseFetch(idCategory).then(result => setZapas(result))
+            setLoading(false)
+        } else{
+            firebaseFetch().then(result => setZapas(result))
+            setLoading(false)
         }
-    },[])
+    },[idCategory]);
+    
+        //componentDidunmount
+        useEffect(() => {
+            return(() => {
+                setZapas([]);
+            })
+        },[]);
+    
 
 
 
@@ -57,6 +58,7 @@ const ItemListContainer = () => {
     )
     
 }
+
 
 
 export default ItemListContainer;
