@@ -15,8 +15,7 @@ const ItemDetail = ({zapa}) => {
     const [itemCount, setItemCount] = useState(0);
     const [size, setSize] = useState(0);
     const ctx = useContext(CartContext) //hook que me permite usar el contexto, funcion global para modificar el estado global
-
-    
+    console.log(zapa.sizes)
 
 
     const onAdd = (quantity , itemSize) => {

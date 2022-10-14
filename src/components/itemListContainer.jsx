@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import customFetch from '../utils/customFetch';
 import {db} from '../utils/firebaseConfig';
 import { collection, getDocs, where, query, orderBy} from "firebase/firestore";
-import { firebaseFetch } from "../utils/firebaseFetch";
+
 
 
 
@@ -17,17 +17,17 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
     const [loading, setLoading] = useState(true);
 
-    
 
+    const firebaseFetch = async (idCategory) => {
+        const collectionRef = idCategory ? query(collection(db, "zapas"), where("categoryid", "==", parseInt(idCategory))) : collection(db, "zapas");
+        getDocs(collectionRef).then((res) => {
+            setZapas(res.docs.map((prod) => ({id: prod.id, ...prod.data(), })))
+        });
+    }
     //componentDidUpdate
     useEffect( () => {
-        if (idCategory){
-            firebaseFetch(idCategory).then(result => setZapas(result))
-            setLoading(false)
-        } else{
-            firebaseFetch().then(result => setZapas(result))
-            setLoading(false)
-        }
+        firebaseFetch(idCategory);
+        setLoading(false);
     },[idCategory]);
     
         //componentDidunmount

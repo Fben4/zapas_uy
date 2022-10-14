@@ -8,18 +8,18 @@ const CartContextProvider = ({children}) =>{
 
 
     const addItem = (product, quantity, size) =>{
-        isInCart (product.id) ? increase(product.id, quantity) : setCartList([...cartList, {...product, quantity, size}])
+        isInCart (product.id,size) ? increase(product.id, quantity,size) : setCartList([...cartList, {...product, quantity, size}])
     
     }
 
-    const isInCart = (id) => cartList.some(item => item.id === id) //funcion que me dice si el producto esta en el carrito
+    const isInCart = (id,size) => cartList.some(item => item.id === id && size === item.size) //funcion que me dice si el producto esta en el carrito
 
-    const increase = (id, quantity, stock) =>{
+    const increase = (id, quantity, stock,size) =>{
         if (cartList.some(item => item.id === id && item.quantity >= stock)) { //si la cantidad del producto es mayor o igual al stock, no lo dejo agregar mas
             alert('No hay mas stock')
 
         }
-        else if (cartList.some(item => item.id === id &&  quantity <= stock)){
+        else if (cartList.some(item => item.id === id &&  quantity <= stock && size === item.size)) { //si la cantidad del producto es menor o igual al stock, lo dejo agregar mas
             setCartList(cartList.map(item => item.id === id ? {...item, quantity: item.quantity + quantity} : item))//recorro el carrito y si el id del producto coincide con el id del producto que quiero aumentar, aumento la cantidad  
         } 
     }

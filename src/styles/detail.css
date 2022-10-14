@@ -76,8 +76,8 @@
     padding: 0;
 }
 .log{
-    min-height: 40%;
-    min-width: 40%;
+    max-height: 30%;
+    max-width: 30%;
 }
 
 .gotokart {

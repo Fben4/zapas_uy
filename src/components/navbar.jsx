@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
+import {  useContext } from 'react';
+import { CartContext } from "./cartContext";
 
 const Cart = () => {
+    const ctx = useContext(CartContext);
     return(
         
         <div className='position-relative'>
-            <Link to='./cart'>
+            
             <FontAwesomeIcon icon={faCartShopping} className = 'cart'></FontAwesomeIcon>
-            <span className='badge bg-secondary  '>4</span></Link>
+            <span className='badge bg-secondary  '>{ctx.cartQuantity() }</span>
             
         </div>
             
@@ -40,7 +42,7 @@ const Navbar = () => {
                                 <Link className='nav-link' to='/category/2' >Mujeres</Link>
                             </li>
                             <li className='nav-item'>
-                                <a className='nav-link'><Cart></Cart></a>
+                                <Link to='./cart' className='nav-link'><Cart></Cart></Link>
                             </li>
                         
                     </ul>

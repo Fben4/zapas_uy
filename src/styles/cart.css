@@ -34,28 +34,59 @@
     
 }
 
-.item{
+.items{
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
+.items h3{
+    font-size: 20px;
+}
+
 .subtotal p{
     color: rgb(47, 118, 47);
 }
 
-
+.total-title{
+    margin: 10px 0 10px 0;
+}
 .sum{
-    padding: 0;
-    margin: auto;
+
+    height: 30px;
+    margin: 10px 0 10px 0;
 
 }
+.resumen{
+    margin: 0 0 0 30px;
+}
+.total{
+    color: green;
+}
 .summary{
+    
     background-color: white;
-    min-height: 300px;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     border-radius: 26px;
 
 }
 
+
+@media (min-height: 680px), screen and (orientation: portrait) {
+    .cartimg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        width: 250px;
+        
+    }
+
+    .resumen{
+        margin: 0;
+    }
+  }

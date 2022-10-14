@@ -3,7 +3,9 @@ import customFetch from "../utils/customFetch";
 import  data  from "../utils/data";
 import ItemDetail from "./itemDetail";
 import { useParams } from "react-router-dom";
-
+import {db} from '../utils/firebaseConfig';
+import { collection, getDocs, where, query, orderBy} from "firebase/firestore";
+import { fetchone } from "../utils/fetchone";
 
 
 
@@ -13,17 +15,22 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams();
     const [loading, setLoading] = useState(true);
 
+
+
+
+
     //componentDidMount
-    useEffect(() => { // funciones a ejecutar cuando se monta el componente, consulto base de datos en este caso 
-        if (idItem){
-            customFetch(2000, data.find(item => item.id == idItem)) 
-            .then(result => setZapa(result))
-            .then(() => setLoading(false))
-            .catch(error => console.log(error))
-            }
-            
+    useEffect(() => { // funciones a ejecutar cuando se monta el componente, consulto base de datos en este caso y actualizo el estado
+        fetchone(idItem).then((res) => setZapa(res));
+        setLoading(false);
         } , [idItem]);
 
+    //componentDidunmount
+    useEffect(() => {
+        return(() => {
+            setZapa({});
+        })
+    },[]);
 
     return (
         <div>
