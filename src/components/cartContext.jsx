@@ -39,7 +39,6 @@ const CartContextProvider = ({children}) =>{
 
     const clear = () =>{
         setCartList([])//limpio el carrito
-        console.log(cartList)
     }
 
     

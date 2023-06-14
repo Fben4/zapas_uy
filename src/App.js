@@ -22,6 +22,7 @@ import Cart from './components/cart';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import CartContextProvider from './components/cartContext';
 
+
 function App() {
   return (
     <CartContextProvider>

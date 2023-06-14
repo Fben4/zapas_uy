@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import customFetch from "../utils/customFetch";
-import  data  from "../utils/data";
+
 import ItemDetail from "./itemDetail";
 import { useParams } from "react-router-dom";
 import {db} from '../utils/firebaseConfig';
-import { collection, getDocs, where, query, orderBy} from "firebase/firestore";
 import { fetchone } from "../utils/fetchone";
 
 

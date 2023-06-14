@@ -1,21 +1,21 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
-
-const Cardcolor = (props) =>{
+const Cardcolor = (props) => {
     return (
         <div className="container">
-    <div className="card card_orange">
-        <div className="imgBx">
-            <img src={props.thumbnail} />
-        </div>
-        <div className="contentBx">
-            <h2>{props.name}</h2>
+            <div className="card card_orange">
+                <div className="imgBx">
+                    <img src={props.thumbnail} />
+                </div>
+                <div className="contentBx">
+                    <h2>{props.name}</h2>
 
-            <a href="#">Comprar</a>
+                    <Link to={`/item/2`} className='buy'>Comprar</Link>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
     )
 }
 

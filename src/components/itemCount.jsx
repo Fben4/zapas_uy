@@ -30,7 +30,6 @@ const ItemCount = ({ initiate, stock, onAdd, sizesarray }) => {
 
     const select = (e) => {
         setItemSize(e.target.value);
-        console.log('select', e.target.value);
     }
 
 
