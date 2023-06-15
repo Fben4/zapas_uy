@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Fben4/zapas_uy/static/css/main.654c7d97.css",
-    "main.js": "/Fben4/zapas_uy/static/js/main.eee16182.js",
-    "static/media/badbunny.png": "/Fben4/zapas_uy/static/media/badbunny.410118baddc21ac1195f.png",
-    "static/media/270.png": "/Fben4/zapas_uy/static/media/270.cd7b6f873e4fd01370b8.png",
-    "static/media/airmax.png": "/Fben4/zapas_uy/static/media/airmax.0f9ec43a59be45d84ff8.png",
-    "static/media/vanspro.png": "/Fben4/zapas_uy/static/media/vanspro.99cbdeb20a4f75b71dd2.png",
-    "index.html": "/Fben4/zapas_uy/index.html",
-    "main.654c7d97.css.map": "/Fben4/zapas_uy/static/css/main.654c7d97.css.map",
-    "main.eee16182.js.map": "/Fben4/zapas_uy/static/js/main.eee16182.js.map"
+    "main.css": "/zapas_uy/static/css/main.654c7d97.css",
+    "main.js": "/zapas_uy/static/js/main.fcee19cc.js",
+    "static/media/badbunny.png": "/zapas_uy/static/media/badbunny.410118baddc21ac1195f.png",
+    "static/media/270.png": "/zapas_uy/static/media/270.cd7b6f873e4fd01370b8.png",
+    "static/media/airmax.png": "/zapas_uy/static/media/airmax.0f9ec43a59be45d84ff8.png",
+    "static/media/vanspro.png": "/zapas_uy/static/media/vanspro.99cbdeb20a4f75b71dd2.png",
+    "index.html": "/zapas_uy/index.html",
+    "main.654c7d97.css.map": "/zapas_uy/static/css/main.654c7d97.css.map",
+    "main.fcee19cc.js.map": "/zapas_uy/static/js/main.fcee19cc.js.map"
   },
   "entrypoints": [
     "static/css/main.654c7d97.css",
-    "static/js/main.eee16182.js"
+    "static/js/main.fcee19cc.js"
   ]
 }
